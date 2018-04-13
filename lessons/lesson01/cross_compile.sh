@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# See more: https://golang.org/doc/install/source#environment
+
 #echo "build http-linux"
 #GOOS=linux GOARCH=amd64 go build -o bin/http-linux http.go
 
