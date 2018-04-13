@@ -1,4 +1,6 @@
 .idea
 log
 output
+nohup.out
+start-present.sh
 
