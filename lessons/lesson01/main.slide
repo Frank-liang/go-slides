@@ -152,6 +152,8 @@ Go语言是Google于2009年推出的一门新的系统编程语言。
 * 四、3D动画展示程序并发架构
 * 五、跨平台编译的HTT服务器
 * 六、Socket Daytime协议服务器
+.image socket/socket.png
+
 * 七、作业
 * 八、QA
 
