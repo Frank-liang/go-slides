@@ -5,8 +5,19 @@ PP
 
  https://github.com/wusuopubupt
 
-* golang简介 
+* 大纲
+- golang简介
+- 环境准备
+- 语法熟悉
+- 3D动画展示程序并发架构
+- 跨平台编译的HTT服务器
+- Socket Daytime协议服务器
+- 作业
+- QA
 
+* 一、golang简介
+
+* golang简介
 Go语言是Google于2009年推出的一门新的系统编程语言。
 
 特点:
@@ -81,7 +92,8 @@ Go语言是Google于2009年推出的一门新的系统编程语言。
 - 使用golang编写的监控系统
 - 数据采集传输和展示系统
 
-* 开始前的环境准备
+
+* 二、环境准备
 
 * 安装
 下载地址(官网):
@@ -134,5 +146,13 @@ Go语言是Google于2009年推出的一门新的系统编程语言。
 
 - 在线查看文档
   godoc.org/github.com/golang/protobuf/proto
+
+
+* 三、语法熟悉
+* 四、3D动画展示程序并发架构
+* 五、跨平台编译的HTT服务器
+* 六、Socket Daytime协议服务器
+* 七、作业
+* 八、QA
 
 
