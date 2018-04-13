@@ -19,9 +19,9 @@ go install golang.org/x/tools/cmd/present
 go get github.com/wusuopubupt/go-slides
 
 # 3) start local present http server
-cd ${GOPATH}/src/github.com/wusuopubupt/go-slides && ${GOPATH}/bin/present -http 127.0.0.1:8989
+cd ${GOPATH}/src/github.com/wusuopubupt/go-slides && ${GOPATH}/bin/present -http :9000
 
-# 4) view the slides by accessing 127.0.0.1:8989 in your browser
+# 4) view the slides by accessing 127.0.0.1:9000 in your browser
 
 
 ```
