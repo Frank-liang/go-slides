@@ -14,6 +14,7 @@ func handle(conn net.Conn) {
 }
 
 func main() {
+	log.Println("Start to listen on tcp port 8080")
 	l, err := net.Listen("tcp", ":8080")
 	if err != nil {
 		log.Fatal(err)
