@@ -1,5 +1,9 @@
 package main
 
+import (
+    "fmt"
+)
+
 func main() {
 	str1 := "hello"
 	doc := `
@@ -7,4 +11,6 @@ func main() {
 可以验证一下
 类似python的'''
 `
+    fmt.Println("str1 is: ", str1)
+    fmt.Println("doc is: ", doc)
 }
