@@ -114,19 +114,14 @@ PP
 
 * 四、文件读写
 
-* 打开关闭文件
-
-.code io/file_read_1.go
-
 * 读取文件
-
-- 顺序读取
-- 随机读取
+.code io/file_read.go
 
 * 写入文件
 
 - 顺序写入
 - 随机写入
+.code io/file_write.go
 
 * 练习1
 
