@@ -6,11 +6,7 @@ import (
 
 func toUpper(s string) string {
 	buf := []byte(s)
-	for i := 0; i < len(buf); i++ {
-        if(buf[i] >= 'a' && buf[i] <= 'z') {
-		    buf[i] = buf[i] - 32
-        }
-	}
+    // 补全代码
 	return string(buf)
 }
 

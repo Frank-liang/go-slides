@@ -48,7 +48,13 @@ PP
 
 .code string/str_modify.go
 
-* 练习
+* 练习1
+
+小写字符转大写
+
+.code string/str_to_upper_case.go
+
+* 练习2
 
 反转字符串
 
@@ -74,9 +80,6 @@ PP
 - 类型转换需要显式进行
 - 字符串跟数字需要借助函数转换 strconv
 
-* 练习
-
-编写计算器，调用形式如 expr 1 + 2
 
 * 三、控制语句
 
@@ -90,9 +93,13 @@ PP
 
 * switch语句
 
-* 练习:
+* 练习1:
 
 .code if_exercise1.go
+
+* 练习2:
+
+编写计算器，调用形式如 expr 1 + 2
 
 * for循环1
 

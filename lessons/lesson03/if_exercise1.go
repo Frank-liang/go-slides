@@ -2,11 +2,14 @@ package main
 
 import (
 	"fmt"
+	"time"
 	"math/rand"
 )
 
 func main() {
+    rand.Seed(time.Now().UnixNano())
 	x := rand.Intn(10)
+    fmt.Println("x: ", x)
 	fmt.Print("guess a number 1-10:")
 	var n int
 	fmt.Scanf("%d", &n)
