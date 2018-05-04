@@ -9,10 +9,6 @@ const (
 )
 
 const (
-	Hello = "hello"
-)
-
-const (
 	A = iota
 	B
 	C

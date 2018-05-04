@@ -25,6 +25,7 @@ PP
 * 整数
 
   int, int32, int64, uint, uint32, uint64
+  
 
 * 练习
 
@@ -54,6 +55,10 @@ PP
 
 .code string/str_to_upper_case.go
 
+
+* ascii表
+.image asciifull.gif
+
 * 练习2
 
 反转字符串
@@ -71,31 +76,20 @@ PP
  fmt.Println(3/2)输出啥?
 
 * 常量
-
-- const 关键字
-- 无明确类型
-
-* 强类型
-
-- 类型转换需要显式进行
-- 字符串跟数字需要借助函数转换 strconv
+- const关键字
+.code const.go
 
 
 * 三、控制语句
 
 * if语句
-.code if.go
 
 - 没有小括号'('
 - 只能是bool表达式, 数字，字符串之类的不行
-
-* if加判断语句
+.code if.go
 
 * switch语句
-
-* 练习1:
-
-.code if_exercise1.go
+.code switch.go
 
 * 练习2:
 
@@ -141,7 +135,6 @@ PP
 * 练习2
 
 循环读取9x9乘法表文件内容，打印出来
-
 
 * 读取目录
 
