@@ -127,16 +127,16 @@ PP
 
 打印9x9乘法表，并写入到文件中
 
+ f,err := os.Create("table.txt")
+ fmt.Fprintf(f, "%d", 10)
+ f.Close()
+
 * 练习2
 
 循环读取9x9乘法表文件内容，打印出来
 
 * 读取目录
 
-.code io/dir.go
-
-* 练习1
-获取当前系统运行的所有pid
+.code io/ls.go
 
 * 五、作业
-获取当前系统运行的所有pid以及二进制名字
