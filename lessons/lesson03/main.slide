@@ -36,20 +36,23 @@ PP
 
 * 字符串
 
-.code str.go
+.code string/str.go
 
 * 字符串操作
 
-.code str_op.go
+.code string/str_op.go
 
 * 字符串修改
 
-- 本身不可修改
-- 通过跟[]byte相互转换来修改
+- 本身不可修改, 通过跟[]byte相互转换来修改
+
+.code string/str_modify.go
 
 * 练习
 
 反转字符串
+
+.code string/util/strutil.go
 
 * 布尔
 
@@ -112,7 +115,7 @@ PP
 
 * 打开关闭文件
 
-.code file_read_1.go
+.code io/file_read_1.go
 
 * 读取文件
 
@@ -135,7 +138,7 @@ PP
 
 * 读取目录
 
-.code dir.go
+.code io/dir.go
 
 * 练习1
 获取当前系统运行的所有pid
