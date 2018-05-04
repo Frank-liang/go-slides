@@ -1,13 +1,13 @@
 package main
 
 import (
-    "os"
-    "io/ioutil"
-    "fmt"
+	"fmt"
+	"io/ioutil"
+	"os"
 )
 
-func main()  {
-    filename := os.Args[1]
-    bytes, _:= ioutil.ReadFile(filename)
-    fmt.Println(string(bytes))    
+func main() {
+	filename := os.Args[1]
+	bytes, _ := ioutil.ReadFile(filename)
+	fmt.Println(string(bytes))
 }

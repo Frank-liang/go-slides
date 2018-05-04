@@ -1,16 +1,16 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func main() {
 	str1 := "hello"
 	doc := `
-即使换行也不影响
-可以验证一下
-类似python的'''
+    line1    
+    line2    
+    line3    
 `
-    fmt.Println("str1 is: ", str1)
-    fmt.Println("doc is: ", doc)
+	fmt.Println("str1 is: ", str1)
+	fmt.Println("doc is: ", doc)
 }
