@@ -1,15 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unsafe"
+)
 
 func main() {
-	var q [3]int = [3]int{1, 2, 3}
-	var r [3]int = [3]int{1, 2}
-	fmt.Println(r[2])
+	var r [3]int = [3]int{1, 2, 3}
+	fmt.Printf("r: %v, len: %d, size: %v\n", r, len(r), unsafe.Sizeof(r))
 
-	q1 := [...]int{1, 2, 3, 4}
-	fmt.Println(q1)
+	var a [3]int = [3]int{1, 2}
+	fmt.Printf("a: %v, len: %d, size: %v\n", a, len(a), unsafe.Sizeof(a))
 
-	q2 := [...]int{4: 2, 10: -1}
-	fmt.Println(q2)
+	b := [...]int{1, 2, 3}
+	fmt.Printf("b: %v, len: %d, size: %v\n", b, len(b), unsafe.Sizeof(b))
+
+	c := [...]int{0: 1, 2: 3}
+	fmt.Printf("c: %v, len: %d, size: %v\n", c, len(c), unsafe.Sizeof(c))
 }

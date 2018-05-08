@@ -11,4 +11,13 @@ func main() {
 	fmt.Println(a2)
 
 	fmt.Println(a1 == a2)
+
+	// 内存连续, 8byte
+	for i := 0; i < 3; i++ {
+		fmt.Printf("a1[%d]:%d, &a1[%d]: %d\n", i, a1[i], i, &a1[i])
+	}
+	for i := 0; i < 3; i++ {
+		fmt.Printf("a2[%d]:%d, &a2[%d]: %d\n", i, a2[i], i, &a2[i])
+	}
+
 }
