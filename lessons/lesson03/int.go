@@ -10,10 +10,10 @@ func main() {
 	// INT OMIT
 	var (
 		v1 int
-		v2 int32 // (-2^16) ~ (2^16-1)
+		v2 int32
 		v3 int64
 		v4 uint
-		v5 uint32 // 0 ~ 2^32 -1
+		v5 uint32
 		v6 uint64
 	)
 
