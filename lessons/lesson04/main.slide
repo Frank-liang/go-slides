@@ -22,6 +22,10 @@ PP
 
 .code array_assign.go
 
+* 二维数组
+.image array_2d.png
+.code array_2d.go 
+
 * 数组的应用:md5
 
 - https://godoc.org/crypto/md5
