@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	data := []byte("hello")
+	data := []byte("123456")
 	md5sum := md5.Sum(data)
-	fmt.Printf("%x\n", md5sum)
+	fmt.Printf("md5:%v, len:%d\n", md5sum, len(md5sum))
 }
