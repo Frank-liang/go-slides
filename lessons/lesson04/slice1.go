@@ -15,7 +15,9 @@ func main() {
 	b := names[1:3]
 	fmt.Println(a, b)
 
+	// 影响了哪些?
 	b[0] = "XXX"
+
 	fmt.Println(a, b)
 	fmt.Println(names)
 }

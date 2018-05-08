@@ -30,7 +30,7 @@ PP
 
 * 练习
 
-编写md5sum程序
+编写md5sum程序, 接受一个命令行传入的文件名，输出其md5
 
 * 切片
 
@@ -49,7 +49,7 @@ PP
 .code slice_default.go
 
 * 切片长度和容量
-
+.image slice_len_cap.png
 .code slice_len.go
 
 * nil切片

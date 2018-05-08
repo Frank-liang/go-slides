@@ -3,22 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	s := []int{2, 3, 5, 7, 11, 13}
-	printSlice(s)
-
-	// Slice the slice to give it zero length.
-	s = s[:0]
-	printSlice(s)
-
-	// Extend its length.
-	s = s[:4]
-	printSlice(s)
-
-	// Drop its first two values.
-	s = s[2:]
-	printSlice(s)
-}
-
-func printSlice(s []int) {
-	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+	Array_a := [10]byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'}
+	Slice_a := Array_a[2:5]
+	fmt.Printf("len=%d cap=%d %v\n", len(Slice_a), cap(Slice_a), Slice_a)
 }
