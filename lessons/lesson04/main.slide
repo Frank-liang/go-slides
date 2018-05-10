@@ -103,6 +103,7 @@ PP
 * 练习
 
 统计单词出现的个数
+.code word_count.go /START OMIT/,/END OMIT/
 
 * 结构体
 
