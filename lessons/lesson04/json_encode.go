@@ -12,11 +12,10 @@ type Student struct {
 }
 
 func main() {
-    //短变量声明 ？
     var s Student
     s.Id = 1
     s.Name = "Alice"
-	buf, err := json.Marshal(s)
+    buf, err := json.MarshalIndent(s, "", "\t")
 	if err != nil {
 		log.Fatalf("marshal error:%s", err)
 	}
