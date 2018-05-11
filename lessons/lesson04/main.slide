@@ -65,15 +65,15 @@ one two three  ->  three two one
 
 * 切片字面量
 
-.code slice_iter.go
+.code slice_literal.go
 
 * 切片方法
 
-.code slice_default.go
+.code slice_method.go
 
 * 切片长度和容量
 .image slice_len_cap.png
-.code slice_len.go
+.code slice_len.go /START OMIT/,/END OMIT/
 
 * nil切片
 
@@ -86,6 +86,13 @@ one two three  ->  three two one
 * append切片
 
 .code slice_append.go
+
+* append切片
+
+.code slice_append_2.go
+
+* append的实现原理
+.code append_int.go
 
 * range切片
 
