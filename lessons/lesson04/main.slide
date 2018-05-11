@@ -95,11 +95,17 @@ one two three  ->  three two one
 .code append_int.go
 
 * range切片
-
 .code slice_range.go
 
-* 练习
-- 反转切片的函数
+* 切片删除元素 
+.code slice_remove_element.go
+
+* 作业
+实现一个处理函数removeDup，去除[]string slice中相邻的重复字符串元素, 
+返回去重后的切片
+
+["tom", "tom", "tom", "jack", "tom"]  -> ["tom, "jack", "tom"]
+
 
 * map
 
@@ -122,9 +128,11 @@ one two three  ->  three two one
 
 .code map_range.go
 
-- 遍历顺序不确定
 
-* 练习
+* 练习: 从Stdin一行一行地读取数据，只输出不重复的行
+.code dedup.go
+
+* 作业
 
 统计单词出现的个数
 .code word_count.go /START OMIT/,/END OMIT/

@@ -12,8 +12,11 @@ func main() {
 
 	ages1 := map[string]int{
 		"a": 1,
-		"b": 2,
 	}
+	ages1["b"] = 2
+
+	delete(ages1, "b")
 
 	fmt.Println(ages, ages1)
+	//fmt.Println(ages == ages1)
 }
