@@ -4,8 +4,17 @@ Go课程
 PP
  https://github.com/wusuopubupt
 
+* 大纲
+- 作业点评和上节知识点回顾
+- 复合数据类型
+- 序列化和反序列化
+- 课堂实战管理系统
+- 作业
+- QA
+
 * 复合数据类型
-- 数组，切片
+- 数组
+- 切片
 - map
 - 结构体
 - 序列化和反序列化
@@ -44,6 +53,16 @@ PP
 
 .code slice1.go
 
+* 切片原理
+.code slice_show.md
+
+- 练习1: 打印a、b的共同元素(for _, p := range a {...})
+
+* 练习
+原地反转任意长度的字符串数组
+
+one two three  ->  three two one
+
 * 切片字面量
 
 .code slice_iter.go
@@ -71,11 +90,9 @@ PP
 * range切片
 
 .code slice_range.go
+
 * 练习
 - 反转切片的函数
-
-* 作业1
-- 反转切片的两部分
 
 * map
 

@@ -14,10 +14,10 @@ func main() {
 
 	// 内存连续, 8byte
 	for i := 0; i < 3; i++ {
-		fmt.Printf("a1[%d]:%d, &a1[%d]: %d\n", i, a1[i], i, &a1[i])
+		fmt.Printf("a1[%d]:%d, &a1[%d]: %d, &a1: %d\n", i, a1[i], i, &a1[i], &a1)
 	}
 	for i := 0; i < 3; i++ {
-		fmt.Printf("a2[%d]:%d, &a2[%d]: %d\n", i, a2[i], i, &a2[i])
+		fmt.Printf("a2[%d]:%d, &a2[%d]: %d, &a2: %d\n", i, a2[i], i, &a2[i], &a2)
 	}
 
 }

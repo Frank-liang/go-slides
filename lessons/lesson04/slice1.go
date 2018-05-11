@@ -13,6 +13,7 @@ func main() {
 
 	a := names[0:2]
 	b := names[1:3]
+
 	fmt.Println(a, b)
 
 	// 影响了哪些?

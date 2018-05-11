@@ -5,7 +5,9 @@ import "fmt"
 func main() {
 	s := []int{2, 3, 5, 7, 11, 13}
 
-	s = s[1:4]
+	s[0] = 1
+
+	s = s[0:4]
 	fmt.Println(s)
 
 	s = s[:2]

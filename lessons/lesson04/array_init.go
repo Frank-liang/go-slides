@@ -13,6 +13,7 @@ func main() {
 	fmt.Printf("a: %v, len: %d, size: %v\n", a, len(a), unsafe.Sizeof(a))
 
 	b := [...]int{1, 2, 3}
+	b[2] = 0
 	fmt.Printf("b: %v, len: %d, size: %v\n", b, len(b), unsafe.Sizeof(b))
 
 	c := [...]int{0: 1, 2: 3}
