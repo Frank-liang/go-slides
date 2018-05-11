@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -15,21 +16,32 @@ type Student struct {
 var stuMap = make(map[string]Student)
 
 func main() {
+	scanner := bufio.NewScanner(os.Stdin)
 	for {
 		var cmd string
-		fmt.Println("Input:")
-		fmt.Scan(&cmd)
+		var name string
+		var id int
+		fmt.Print(">")
+		scanner.Scan()
+		line := scanner.Text()
+		fmt.Sscan(line, &cmd)
 		switch cmd {
 		case "add":
-			add()
+			fmt.Sscan(line, &cmd, &id, &name)
+			add(id, name)
 		case "del":
-			del()
+			fmt.Sscan(line, &cmd, &name)
+			del(name)
 		case "list":
 			list()
 		case "save":
-			save()
+			var filename string
+			fmt.Sscan(line, &cmd, &filename)
+			save(filename)
 		case "load":
-			load()
+			var filename string
+			fmt.Sscan(line, &cmd, &filename)
+			load(filename)
 		case "exit":
 			return
 		default:
@@ -38,30 +50,27 @@ func main() {
 	}
 }
 
-func add() {
-	var id int
-	var name string
-	fmt.Scan(&id, &name)
+func add(id int, name string) {
+	if _, ok := stuMap[name]; ok {
+		fmt.Printf("Duplicate name: %s\n", name)
+		return
+	}
 	student := Student{Id: id, Name: name}
 	stuMap[name] = student
 }
 
 func list() {
-	fmt.Printf("id\tname\n")
+	fmt.Printf("ID\tNAME\n")
 	for _, stu := range stuMap {
 		fmt.Printf("%d\t%s\n", stu.Id, stu.Name)
 	}
 }
 
-func del() {
-	var name string
-	fmt.Scan(&name)
+func del(name string) {
 	delete(stuMap, name)
 }
 
-func save() {
-	var filename string
-	fmt.Scan(&filename)
+func save(filename string) {
 	f, _ := os.Create(filename)
 	defer f.Close()
 
@@ -69,9 +78,7 @@ func save() {
 	f.Write(buf)
 }
 
-func load() {
-	var filename string
-	fmt.Scan(&filename)
+func load(filename string) {
 	buf, _ := ioutil.ReadFile(filename)
 	json.Unmarshal(buf, &stuMap)
 }
