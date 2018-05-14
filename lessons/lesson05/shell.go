@@ -10,7 +10,7 @@ import (
 
 func main() {
 	host, _ := os.Hostname()
-	prompt := fmt.Sprintf("[icexin@%s]$ ", host)
+	prompt := fmt.Sprintf("[pp@%s]$ ", host)
 	r := bufio.NewScanner(os.Stdin)
 	for {
 		fmt.Print(prompt)

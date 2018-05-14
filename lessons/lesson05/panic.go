@@ -8,10 +8,10 @@ func print() {
 }
 
 func main() {
-	var n int
+	var n int = 0
 	fmt.Println(10 / n)
-	print()
+	//print()
 
-	var slice [3]int
-	fmt.Println(slice[3])
+	//var slice [3]int
+	//fmt.Println(slice[3])
 }

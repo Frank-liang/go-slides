@@ -6,9 +6,10 @@ import (
 )
 
 func toupper(s string) string {
-	return strings.Map(func(r rune) rune {
+	mapFunc := func(r rune) rune {
 		return r - ('a' - 'A')
-	}, s)
+	}
+	return strings.Map(mapFunc, s)
 }
 
 func main() {
