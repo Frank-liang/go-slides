@@ -29,6 +29,16 @@ PP
 * 练习
 递归方式反转链表
 
+* package下的可见性
+
+- 一个目录为一个package
+- 同一个package下的全局变量、函数在package下各个文件都可见
+- 同一个package下的可见性不需要首字母大写
+
+* 练习
+在同一个package下新建print.go和reverse.go，分别实现printList和reverse函数
+.code linkedlist/package.tree
+
 * 二叉树
 
 * 函数

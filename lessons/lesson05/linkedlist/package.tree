@@ -1,0 +1,13 @@
+dash@mbp:lesson05/linkedlist ‹master*›$ tree
+.
+├── build.sh
+├── print.go
+├── reverse.go
+└── student_list.go
+
+0 directories, 4 files
+dash@mbp:lesson05/linkedlist ‹master*›$ cat build.sh
+#!/bin/bash
+
+go build -o stu_list *.go
+dash@mbp:lesson05/linkedlist ‹master*›$
