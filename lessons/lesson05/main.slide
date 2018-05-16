@@ -5,9 +5,11 @@ PP
  https://github.com/wusuopubupt
 
 
-* 过程式编程
+* 大纲
 
+- 作业点评和上节知识点回顾
 - 函数
+- 闭包
 - 错误异常处理
 - Go调用外部程序
 - 文件读取的多种方式
@@ -31,10 +33,13 @@ PP
 
 * 递归
 
-.image digui.png 400 _
-* 递归实现斐波那契数列
+.image recursive.png 400 _
 
+* 递归实现斐波那契数列
 .code fib.go
+
+* 练习: 递归实现阶乘
+.image factorial.jpg 300  _
 
 * 函数的要素
 
@@ -74,10 +79,13 @@ PP
 
 * 调用系统命令
 .code cmd_ls.go
+
+* 标准输入，输出和错误
+.code cmd_ls_2.go
+
 * 交互式调用
 .code cmd_pipe.go
 
-* 标准输入，输出和错误
 
 * 练习：编写shell
 * 管道

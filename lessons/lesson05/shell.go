@@ -11,13 +11,10 @@ import (
 func main() {
 	host, _ := os.Hostname()
 	prompt := fmt.Sprintf("[pp@%s]$ ", host)
-	r := bufio.NewScanner(os.Stdin)
-	for {
+	scanner := bufio.NewScanner(os.Stdin)
+	for scanner.Scan() {
 		fmt.Print(prompt)
-		if !r.Scan() {
-			break
-		}
-		line := r.Text()
+		line := scanner.Text()
 		if len(line) == 0 {
 			continue
 		}
