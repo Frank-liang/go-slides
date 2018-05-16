@@ -8,11 +8,28 @@ PP
 * 大纲
 
 - 作业点评和上节知识点回顾
+- 链表
+- 二叉树
 - 函数
 - 闭包
 - 错误异常处理
 - Go调用外部程序
 - 文件读取的多种方式
+
+
+* 链表
+.code linkedlist/student_list.go
+
+* 链表遍历
+.code linkedlist/print.go
+
+* 反转链表
+.code linkedlist/reverse.go
+
+* 练习
+递归方式反转链表
+
+* 二叉树
 
 * 函数
 
@@ -56,10 +73,10 @@ PP
 * 匿名函数
 .code toupper.go
 * 闭包
-.code closure.go
+.code closure/closure.go
 
 * 闭包坑
-.play closure1.go
+.play closure/closure1.go
 
 * 练习：排序
 
@@ -78,13 +95,13 @@ PP
 .code panic.go
 
 * 调用系统命令
-.code cmd_ls.go
+.code cmd-exec/cmd_ls.go
 
 * 标准输入，输出和错误
-.code cmd_ls_2.go
+.code cmd-exec/cmd_ls_2.go
 
 * 交互式调用
-.code cmd_pipe.go
+.code cmd-exec/cmd_pipe.go
 
 
 * 练习：编写shell
