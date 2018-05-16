@@ -4,14 +4,12 @@ Go课程
 PP
  https://github.com/wusuopubupt
 
-
 * 大纲
 
 - 作业点评和上节知识点回顾
 - 链表
-- 二叉树
 - 函数
-- 闭包
+- 匿名函数和闭包
 - 错误异常处理
 - Go调用外部程序
 - 文件读取的多种方式
@@ -39,8 +37,6 @@ PP
 在同一个package下新建print.go和reverse.go，分别实现printList和reverse函数
 .code linkedlist/package.tree
 
-* 二叉树
-
 * 函数
 
 .code func.go
@@ -53,10 +49,18 @@ PP
 
 * 多返回值
 .code multi.go
-* 命名返回值
+* 裸返回
+- 一个函数如果有命名的返回值，则可以省略return语句的操作数
 .code name_multi.go
 * 可变参数
 .code func_var.go
+
+* 练习
+- 实现一个方法，接收可变的int参数列表，通过裸返回的方式，返回最小值和最大值
+  考察：
+  1. 可变参数
+  2. 多返回值
+  3. 裸返回
 
 * 递归
 
@@ -80,15 +84,27 @@ PP
 
 * 练习: 用函数封装学生管理系统
 * 作业：添加更新和删除指令
+
 * 匿名函数
+- func关键字后面没有函数的名称
 .code toupper.go
+
+* 匿名函数
+- 能够获取和修改外层的变量
+- 猜猜👇代码的执行结果?
+.code squares.go
+
 * 闭包
+- 闭包是由函数和与其相关的环境组合而成的实体
+.image closure.png 
+
+* 加法闭包实现
 .code closure/closure.go
 
 * 闭包坑
 .play closure/closure1.go
 
-* 练习：排序
+* 练习
 
 * defer
 - 关闭文件
