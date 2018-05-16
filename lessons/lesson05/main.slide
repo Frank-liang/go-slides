@@ -107,12 +107,25 @@ PP
 * 练习
 
 * defer
-- 关闭文件
-- 函数返回前执行
+- 用于成对的操作：打开和关闭，连接和断开，加锁和解锁
+- 延迟执行的函数在return语句之后执行
+- 执行的时侯以调用defer语句顺序的倒序进行(栈)
 .code defer.go
  
 * defer文件关闭
 .code defer_file.go
+* defer解锁互斥锁
+.code defer_mutex.go
+
+* 延迟执行的函数在return语句之后执行
+.code defer_double.go
+
+* 延迟执行的函数能够改变外层函数返回给调用者的结果
+.code defer_triple.go
+
+* 执行的时侯以调用defer语句顺序的倒序进行(栈)
+.code defer_stack.go
+
 * error类型
 .code error.go
 * EOF error
@@ -129,13 +142,17 @@ PP
 * 交互式调用
 .code cmd-exec/cmd_pipe.go
 
-
 * 练习：编写shell
+
 * 管道
 * 练习：bash管道
+
 * 读取文件几种方式
 - file.Read
 - ioutil.ReadFile
 - bufio.Scanner
 - bufio.Reader
 - io.Copy
+
+* 作业
+* QA

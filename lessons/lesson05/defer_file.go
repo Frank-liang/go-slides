@@ -1,15 +1,22 @@
 package main
 
 import (
-	"log"
+	"bufio"
+	"fmt"
+	"io"
 	"os"
 )
 
 func main() {
-	f, err := os.Open("a.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
+	f, _ := os.Open("a.txt")
 	defer f.Close()
-	// 处理文件
+
+	r := bufio.NewReader(f)
+	for {
+		line, err := r.ReadString('\n')
+		if err == io.EOF {
+			break
+		}
+		fmt.Println(line)
+	}
 }
