@@ -8,12 +8,12 @@ PP
 
 - 作业点评和上节知识点回顾
 - 链表
+- LRU Cache
 - 函数
 - 匿名函数和闭包
-- 错误异常处理
+- defer, panic和recover
 - Go调用外部程序
 - 文件读取的多种方式
-
 
 * 链表
 .code linkedlist/student_list.go
@@ -162,4 +162,3 @@ PP
 - io.Copy
 
 * 作业
-* QA
