@@ -7,6 +7,7 @@ import (
 	"os"
 )
 
+// START OMIT
 func read(f *os.File) (string, error) {
 	var total []byte
 	buf := make([]byte, 1024)
@@ -18,20 +19,18 @@ func read(f *os.File) (string, error) {
 		if err != nil {
 			return "", err
 		}
-		total = append(total, buf[:n]...)
+		total = append(total, buf[:]...)
 	}
 	return string(total), nil
 }
 
 func main() {
-	f, err := os.Open("a.txt")
-	if err != nil {
-		log.Fatalf("open error:%v", err)
-	}
-
+	f, _ := os.Open("a.txt")
 	s, err := read(f)
 	if err != nil {
 		log.Fatalf("read error:%v", err)
 	}
 	fmt.Println(s)
 }
+
+// END OMIT

@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	// START OMIT
 	host, _ := os.Hostname()
 	prompt := fmt.Sprintf("[pp@%s]$ ", host)
 	scanner := bufio.NewScanner(os.Stdin)
@@ -28,4 +29,5 @@ func main() {
 			fmt.Println(err)
 		}
 	}
+	// END OMIT
 }

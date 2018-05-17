@@ -37,6 +37,10 @@ PP
 在同一个package下新建print.go和reverse.go，分别实现printList和reverse函数
 .code linkedlist/package.tree
 
+* LRU Cache
+
+.link https://leetcode.com/problems/lru-cache/description/
+
 * 函数
 
 .code func.go
@@ -127,11 +131,19 @@ PP
 .code defer_stack.go
 
 * error类型
-.code error.go
+.code error.go /START OMIT/,/END OMIT/ 
 * EOF error
-.code eof.go
-* panic和recover
-.code panic.go
+.code eof.go /START OMIT/,/END OMIT/ 
+
+* panic
+- 除零
+- 数组越界
+
+* recover
+.code panic_recover.go
+
+* 模拟try catch
+.code try_catch.go
 
 * 调用系统命令
 .code cmd-exec/cmd_ls.go
@@ -139,13 +151,8 @@ PP
 * 标准输入，输出和错误
 .code cmd-exec/cmd_ls_2.go
 
-* 交互式调用
-.code cmd-exec/cmd_pipe.go
-
 * 练习：编写shell
-
-* 管道
-* 练习：bash管道
+.code shell.go /START OMIT/,/END OMIT/
 
 * 读取文件几种方式
 - file.Read
