@@ -161,9 +161,24 @@ sort
 
 * 读取文件几种方式
 - file.Read
-- ioutil.ReadFile
 - bufio.Scanner
 - bufio.Reader
+- ioutil.ReadFile
 - io.Copy
+
+* file.Read
+.code reader/file.go
+
+* bufio.Scanner
+.code reader/bufio_scanner.go
+
+* bufio.Reader
+.code reader/bufio_reader.go
+
+* io.Copy
+.code reader/io_copy.go
+
+* ioutil.ReadFile
+.code reader/ioutil_readfile.go
 
 * 作业
