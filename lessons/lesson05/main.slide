@@ -109,6 +109,7 @@ PP
 .play closure/closure1.go
 
 * 练习
+sort
 
 * defer
 - 用于成对的操作：打开和关闭，连接和断开，加锁和解锁
@@ -144,6 +145,10 @@ PP
 
 * 模拟try catch
 .code try_catch.go
+
+* builtin包总结
+
+.link https://golang.org/pkg/builtin
 
 * 调用系统命令
 .code cmd-exec/cmd_ls.go
