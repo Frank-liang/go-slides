@@ -90,10 +90,13 @@ PP
 * 常见接口
 
 * sort.Interface
+.code sort_interface.go
+
+* 按字母排序
 .code sort.go
 
 * 练习
-编写一个按照长度排序的实现 byLength
+编写一个按照长度排序的实现 sortbyLength
 
 * http.Handler
 godoc.org/net/http
