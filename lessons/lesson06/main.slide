@@ -8,11 +8,10 @@ PP
 - 作业点评和上节知识点回顾
 - 对象和方法
 - 接口
-- 接口使用
 - 面向对象的方式实现LRUCache
-- 测试
-- 前六节课程总结
+- Etcd
 - 并发编程概览
+- 前六节课程总结
 - 致谢
 
 
@@ -96,27 +95,24 @@ PP
 * http.Handler
 godoc.org/net/http
 
-* error接口
-godoc.org/errrors
-
-* io.Writer和io.Reader
-unix的文件抽象
-
-* io包里面的接口处理
-godoc.org/io
-
-* 接口断言
-.code iassert.go
-
-* switch接口判断
-.code switch.go
-
 * 空接口
 - 空接口可以接受任何类型
  
 * 面向对象的方式实现LRUCache
 
-* 前六节课程总结
+* Etcd
+- 服务发现（Service Discovery）
+- 消息发布与订阅
+- 负载均衡
+- 分布式锁
+- 集群监控与Leader竞选
+
+* Raft协议 
+.link http://thesecretlivesofdata.com/raft
+- 选主
+- 日志副本
+
+* 基于Etcd实现的分布式集群监控Agent
 
 * 并发编程概览
 
