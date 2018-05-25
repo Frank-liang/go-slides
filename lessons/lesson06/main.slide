@@ -9,7 +9,8 @@ PP
 - 对象和方法
 - 接口
 - 面向对象的方式实现LRUCache
-- Etcd
+- Etcd和Raft
+- 基于Etcd实现的分布式监控和任务执行Agent
 - 并发编程概览
 - 前六节课程总结
 - 致谢
@@ -62,10 +63,16 @@ PP
 - 通过首字母大小写来控制可见性
 - 可见性是package级别的
 
-
 * 接口
 - 接口本质是一种自定义类型
+
 * 为什么需要接口
+- SOA
+- OCP原则
+- 多态
+- 大型项目必须
+- 做架构必须
+
 * 声明接口
 .code iowriter.go
 
@@ -79,10 +86,6 @@ PP
 
 * 练习:
 实现一个统计行数的writer
-
-* 接口变量
-
-.code ivar.go
 
 * 常见接口
 
@@ -100,17 +103,59 @@ godoc.org/net/http
  
 * 面向对象的方式实现LRUCache
 
+* 作业
+- 使用golang原生包container/list实现LRUCache
+
 * Etcd
+
+* Etcd优点
+- 高效：基于Go实现
+- 简单：基于HTTP+JSON的API让你用curl就可以轻松使用。
+- 安全：可选SSL客户认证机制。
+- 快速：每个实例每秒支持一千次写操作。
+- 可信：使用Raft算法充分实现了分布式
+
+* etcd架构
+.image etcd/etcd-arch.jpg 500 _
+
+* Raft协议 
+.link http://thesecretlivesofdata.com/raft
+- 选主
+- 日志副本
+
+* Etcd使用场景
 - 服务发现（Service Discovery）
 - 消息发布与订阅
 - 负载均衡
 - 分布式锁
 - 集群监控与Leader竞选
 
-* Raft协议 
-.link http://thesecretlivesofdata.com/raft
-- 选主
-- 日志副本
+* 服务注册与发现
+- 强一致性、高可用的服务存储目录
+- 注册服务和监控服务健康状态的机制(TTL)
+- 查找和连接服务的机制
+.image etcd/etcd-serv-discover.jpg 400 _
+
+* 消息发布与订阅
+- 系统中信息需要动态自动获取与人工干预修改信息请求内容的情况, 蚂蚁金服的DRM
+.image etcd/etcd-pub-sub.jpg 400 _
+
+* 分布式系统调度
+- 某系统有控制台和推送系统两部分组成，控制台的职责是控制推送系统进行相应的推送工作。管理人员在控制台作的一些操作，实际上是修改了etcd上某些目录节点的状态，而etcd就把这些变化通知给注册了Watcher的推送系统客户端，推送系统再作出相应的推送任务。
+.image etcd/etcd.jpg 400 _
+
+* 负载均衡
+- etcd可以监控一个集群中多个节点的状态，当有一个请求发过来后，可以轮询式的把请求转发给存活着的多个状态
+.image etcd/etcd-load-balance.jpg 400 _
+
+* 分布式锁
+- etcd为此提供了一套实现分布式锁原子操作CAS（CompareAndSwap）的API。通过设置prevExist值，可以保证在多个节点同时去创建某个目录时，只有一个成功。而创建成功的用户就可以认为是获得了锁
+.image etcd/etcd-distributed-lock.jpg 400 _
+
+* 集群监控与Leader竞选
+- 前面几个场景已经提到Watcher机制，当某个节点消失或有变动时，Watcher会第一时间发现并告知用户
+- 通过心跳发送机器状态
+- TTL + Raft实现选主
 
 * 基于Etcd实现的分布式监控和任务执行Agent
 - 服务注册
@@ -119,6 +164,10 @@ godoc.org/net/http
 - 机器监控和数据上报
 - watch节点执行下放任务
 
+* What's Next?
+
 * 并发编程概览
+
+* 总结
 
 * 致谢
