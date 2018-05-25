@@ -1,0 +1,6 @@
+func Fprint(w io.Writer, a ...interface{}) (n int, err error) 
+func Fprintf(w io.Writer, format string, a ...interface{})
+func Fprintln(w io.Writer, a ...interface{})
+func Print(a ...interface{}) (n int, err error)
+func Printf(format string, a ...interface{})
+func Println(a ...interface{}) (n int, err error)

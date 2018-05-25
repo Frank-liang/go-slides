@@ -98,11 +98,12 @@ PP
 * 练习
 编写一个按照长度排序的实现 sortbyLength
 
-* http.Handler
-godoc.org/net/http
-
 * 空接口
 - 空接口可以接受任何类型
+.code print_interface.go
+
+* Error接口
+.code error_interface.go
  
 * 面向对象的方式实现LRUCache
 
